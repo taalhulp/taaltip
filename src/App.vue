@@ -1,31 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
+@font-face {
+  font-family: 'Bordkrijt';
+  src: url('./assets/Bordkrijt.woff2') format('woff2'),
+      url('./assets/Bordkrijt.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+html {
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+h1, h2, h3, h4, h5, h6 {
+  color: rgb(231, 135, 9)
 }
 </style>
