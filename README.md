@@ -1,4 +1,4 @@
-# taaltip-cli
+# taaltip
 
 ## Project setup
 ```
