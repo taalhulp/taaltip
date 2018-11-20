@@ -1,7 +1,7 @@
 <template>
 <transition>
 <div class="mask" @click="closeModal">
-    <div class="container" @click.stop>
+    <div class="bevatter" @click.stop>
       <div class="content">
         <slot/>
       </div>
@@ -31,13 +31,13 @@ export default {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, .6);
   transition: opacity .3s ease;
   padding: 0;
   margin: 0;
 }
 
-.container {
+.bevatter {
   margin: 25px auto;
   width: calc(100vw - 4%);
   max-width: 900px;
@@ -84,7 +84,7 @@ button {
   opacity: 0;
 }
 
-.v-enter .container, .v-leave-active .modal-container {
+.v-enter .bevatter, .v-leave-active .bevatter {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }

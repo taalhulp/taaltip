@@ -1,60 +1,62 @@
 <template>
-<div>
-  <div class="bord">
-    <div class="links">
-      <button class="replay link-item" @click="replay()">
-        <IconBase width="18" height="18" icon-name="replay">
-          <IconReplay />
-        </IconBase> opnieuw
-      </button>
-      <a class="link-item" :href="`https://www.facebook.com/sharer/sharer.php?u=https://taalhulp123.nl/taaltip%23/${this.$route.params.id}`">
-        <IconBase width="18" height="18" icon-name="facebook">
-          <IconFacebook />
-        </IconBase>
-      </a>
-      <a class="link-item" :href="`https://twitter.com/share?url=https://taalhulp123.nl/taaltip%23/${this.$route.params.id}&amp;text=Taaltip:%20${encodeURI(tip.title)}&amp;hashtags=taalhulp`">
-        <IconBase width="18" height="18" icon-name="twitter">
-          <IconTwitter /> 
-        </IconBase>
-      </a>
-    </div>
-    <div class="zin">
-      <span v-for="(section, index) in tip.voorbeeld" :key="index">
-        <span v-if="typeof section == 'string'">
-          {{ section }}
-        </span>
-        <span v-else class="goed-fout">
-          <span class="fout" :class="{'fout-weg': animationStart}">
-            {{ section.fout }}
-          </span>
-          <span class="goed hidden" :class="{'goed-verschijn': animationStart}">
-            {{ section.goed }}
-          </span>
-        </span>
-      </span>
-    </div>
-  </div>
-
-  <Hintlijst :hints="tip.hints" />
-
-  <div class="uitleg">
-    <div v-for="(sectie, index) in tip.uitleg" :key="index">
-      <div v-html="sectie.tekst" />
-      <div v-for="(pijl, index) in sectie.pijlen" :key="index">
-        <span v-html="pijl.links"/>
-         →
-         <span v-html="pijl.rechts"/>
-      </div>
-    </div>
-    <div class="referenties">
-      <div v-for="(ref, index) in tip.referenties" :key="index">
-        <a class="reflink" :href="ref.url">
-          {{ref.tekst}}
+<div class="content-layout">
+  <div>
+    <div class="bord">
+      <div class="links">
+        <button class="replay link-item" @click="replay()">
+          <IconBase width="18" height="18" icon-name="replay">
+            <IconReplay />
+          </IconBase> opnieuw
+        </button>
+        <a class="link-item" :href="`https://www.facebook.com/sharer/sharer.php?u=https://taalhulp123.nl/taaltip%23/${this.$route.params.id}`">
+          <IconBase width="18" height="18" icon-name="facebook">
+            <IconFacebook />
+          </IconBase>
+        </a>
+        <a class="link-item" :href="`https://twitter.com/share?url=https://taalhulp123.nl/taaltip%23/${this.$route.params.id}&amp;text=Taaltip:%20${encodeURI(tip.title)}&amp;hashtags=taalhulp`">
+          <IconBase width="18" height="18" icon-name="twitter">
+            <IconTwitter /> 
+          </IconBase>
         </a>
       </div>
+      <div class="zin">
+        <span v-for="(section, index) in tip.voorbeeld" :key="index">
+          <span v-if="typeof section == 'string'">
+            {{ section }}
+          </span>
+          <span v-else class="goed-fout">
+            <span class="fout" :class="{'fout-weg': animationStart}">
+              {{ section.fout }}
+            </span>
+            <span class="goed hyde" :class="{'goed-verschijn': animationStart}">
+              {{ section.goed }}
+            </span>
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <Hintlijst :hints="tip.hints" />
+
+    <div class="uitleg">
+      <div v-for="(sectie, index) in tip.uitleg" :key="index">
+        <div v-html="sectie.tekst" />
+        <div v-for="(pijl, index) in sectie.pijlen" :key="index">
+          <span v-html="pijl.links"/>
+          →
+          <span v-html="pijl.rechts"/>
+        </div>
+      </div>
     </div>
   </div>
 
+  <div class="referenties">
+    <div v-for="(ref, index) in tip.referenties" :key="index">
+      <a class="reflink" :href="ref.url">
+        {{ref.tekst}}
+      </a>
+    </div>
+  </div>
 </div>
 </template>
 
@@ -87,6 +89,13 @@ export default {
 </script>
 
 <style scoped>
+.content-layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .bord {
   font-family: 'Bordkrijt', sans-serif;
   background-image: url('blackboard.jpg');
@@ -112,7 +121,6 @@ export default {
 .link-item {
   opacity: 0.5;
   padding-right: 15px;
-  height: 18px;
   display: inline; 
   color: white;
   transition: opacity 150ms ease;
@@ -150,7 +158,6 @@ button:active {
 
 .uitleg {
   margin: 30px;
-
 }
 
 .goed-fout {
@@ -163,7 +170,7 @@ button:active {
   height: 0;
 }
 
-.hidden {
+.hyde {
   opacity: 0;
 }
 
@@ -210,13 +217,13 @@ button:active {
 }
 
 .referenties {
-  margin-top: 20px;
+  margin: 30px;
   display: flex;
   justify-content: flex-end;
 }
 
 .reflink:link, .reflink:visited, .reflink:hover, .reflink:active {
-  color: white;
+  color: black;
   background-color: lightgrey;
   padding: 5px 8px;
   text-decoration: none;

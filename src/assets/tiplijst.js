@@ -48,8 +48,8 @@ export default {
   "ICT-er-of-ICT'er": {
     datum: new Date(2018, 10, 19),
     title: `ICT-er of ICT’er, ZZP'contract of ZZP-contract`,
-    intro: `Bij samentrekkingen met een afkorting zien we zowel een apostrof als een 
-            verbindingsstreepje. Wanneer gebruiken we het één en wanneer het ander?`,
+    intro: `In woorden met een afkorting staat een apostrof of een verbindingsstreepje. 
+    Wanneer gebruik je de apostrof en wanneer het verbindingsstreepje?`,
     voorbeeld: [
       `Menig `,
       {
@@ -108,8 +108,8 @@ export default {
   "teveel-of-te-veel": {
     datum: new Date(2018, 10, 16),
     title: `teveel of te veel`,
-    intro: `Dit wordt in sommige gevallen aan elkaar en in andere gevallen los geschreven. 
-            Met een simpele tip voorkom je hier een fout.`,
+    intro: `Woorden die aan elkaar of los geschreven worden, hebben een verschillende betekenis. 
+    Met deze tip voorkom je een stijlfout.`,
     voorbeeld: [
       {
         fout: `Teveel`,
@@ -151,7 +151,7 @@ export default {
     datum: new Date(2018, 10, 13),
     title: `persé of per se`,
     intro: `Slechts één schrijfwijze is hier de juiste. Van belang is dat het een Latijnse uitdrukking is.
-            Wat is de spellingsregel?`,
+            Wat is de spellingregel?`,
     voorbeeld: [
       `Zij wil dit jaar `,
       {

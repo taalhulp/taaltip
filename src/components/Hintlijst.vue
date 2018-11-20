@@ -19,10 +19,9 @@ export default {
     beforeEnter: function (el) {
       el.style.opacity = 0;
     },
-    enter: function (el, done) {
-      console.log(el.dataset)
+    enter: function (el) {
       const delay = el.dataset.index * 500 + 7000;
-      setTimeout( () => el.style.opacity = 1, delay)
+      setTimeout( () => el.style.opacity = 1, delay);
     },
     
   }
