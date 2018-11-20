@@ -336,8 +336,8 @@ export default {
   "cadeau's-of-cadeaus": {
     datum: new Date(2018, 10, 4),
     title: `cowboy’tje of cowboytje, cadeau’s of cadeaus`,
-    intro: `Meervoudsvorm en verkleinwoord aan elkaar geschreven of met een apostrof? Van belang is hier 
-            dat het woord eindigt op een combinatie van klinkers.`,
+    intro: `Hoe schrijf je de meervoudsvorm en het verkleinwoord van woorden die eindigen op een
+     combinatie van klinkers? Komt er nu wel of niet een apostrof voor -s en -tje?`,
     voorbeeld: [
       `Het jarige `,
       {
