@@ -19,41 +19,18 @@
           </IconBase>
         </a>
       </div>
-      <div class="zin">
-        <span v-for="(section, index) in tip.voorbeeld" :key="index">
-          <span v-if="typeof section == 'string'">
-            {{ section }}
-          </span>
-          <span v-else class="goed-fout">
-            <span class="fout" :class="{'fout-weg': animationStart}">
-              {{ section.fout }}
-            </span>
-            <span class="goed hyde" :class="{'goed-verschijn': animationStart}">
-              {{ section.goed }}
-            </span>
-          </span>
-        </span>
-      </div>
+      <div class="zin"><span v-for="(section, index) in tip.voorbeeld" :key="index"><span v-if="typeof section == 'string'">{{ section }}</span><span v-else class="goed-fout"><span class="fout" :class="{'fout-weg': animationStart}">{{ section.fout }}</span><span class="goed hyde" :class="{'goed-verschijn': animationStart}">{{ section.goed }}</span></span></span></div>
     </div>
 
     <Hintlijst :hints="tip.hints" />
 
-    <div class="uitleg">
-      <div v-for="(sectie, index) in tip.uitleg" :key="index">
-        <div v-html="sectie.tekst" />
-        <div v-for="(pijl, index) in sectie.pijlen" :key="index">
-          <span v-html="pijl.links"/>
-          →
-          <span v-html="pijl.rechts"/>
-        </div>
-      </div>
-    </div>
+    <div class="uitleg" v-html="tip.uitleg" />
   </div>
 
   <div class="referenties">
-    <div v-for="(ref, index) in tip.referenties" :key="index">
-      <a class="reflink" :href="ref.url">
-        {{ref.tekst}}
+    <div>
+      <a class="reflink" :href="this.$catlijst[tip.cat].link">
+        {{ this.$catlijst[tip.cat].naam }}, {{tip.ref}}
       </a>
     </div>
   </div>
@@ -164,6 +141,7 @@ button:active {
   display: inline-flex;
   flex-direction: column;
   white-space: nowrap;
+  align-items: flex-end;
 }
 
 .goed-fout > span {
