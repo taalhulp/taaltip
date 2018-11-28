@@ -153,11 +153,11 @@ button:active {
 }
 
 .fout-weg {
-  animation: flash-red 1.5s 0.5s 3, disappear 2s 4s forwards;
+  animation: flash-red 1s 0.25s 2, disappear 1.5s 2s forwards;
 }
 
 .goed-verschijn {
-  animation: appear 2s 5s forwards, flash-green 2s 6s;
+  animation: appear 1.5s 3.25s forwards, flash-green 1.5s 4.5s;
 }
 
 @keyframes disappear {
@@ -174,8 +174,8 @@ button:active {
   0% {
     text-shadow: 0 0 0px rgba(255, 0, 0, 0);
   }
-  20% {
-    text-shadow: 0 0 20px rgba(255, 0, 0);
+  30% {
+    text-shadow: 0 0 30px rgba(255, 0, 0);
   }
   100% {
     text-shadow: 0 0 100px rgba(255, 0, 0, 0);

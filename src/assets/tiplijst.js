@@ -49,7 +49,7 @@ export default {
     cat: "spelling",  // "spelling", "stijl" of "werkwoord"
     ref: "kolom 13",
     datum: new Date(2018, 10, 19),  // YYYY MM DD - maand altijd 1 minder!
-    title: `ICT-er of ICT’er, ZZP'contract of ZZP-contract`,
+    title: `ICT-er of ICT’er, zzp'contract of zzp-contract`,
     intro: `In woorden met een afkorting staat een apostrof of een verbindingsstreepje. 
     Wanneer gebruik je de apostrof en wanneer het verbindingsstreepje?`,
     voorbeeld: [
@@ -164,17 +164,17 @@ export default {
     intro: `Hoe om te gaan met Engelse leenwoorden? Deze taaltip legt de verschillende regels uit voor 
             Engelse zelfstandige naamwoorden en werkwoorden.`,
     voorbeeld: [
-      `Ben je `,
+      `Ik ben `,
       {
         fout: `gestresst`,
         goed: `gestrest`
       },
-      ` vanwege het aangebrande eten op de `,
+      ` als het eten aangebrandt, wanneer ik `,
       {
         fout: `gril`,
         goed: `grill`
       },
-      `?`,
+      `.`,
     ],
     hints: [
       `Engelse leenwerkwoorden gaan als het Nederlandse regelmatige werkwoord.`,

@@ -20,7 +20,7 @@ export default {
       el.style.opacity = 0;
     },
     enter: function (el) {
-      const delay = el.dataset.index * 500 + 7000;
+      const delay = el.dataset.index * 500 + 6000;
       setTimeout( () => el.style.opacity = 1, delay);
     },
     
