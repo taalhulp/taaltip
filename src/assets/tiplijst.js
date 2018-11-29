@@ -6,7 +6,7 @@ export default {
     ref: "kolom 13",
     datum: new Date(2018, 10, 19),  // YYYY MM DD - maand altijd 1 minder! januari = 00
     title: `ICT-er of ICT’er, zzp'contract of zzp-contract`,
-    intro: `In woorden met een afkorting staat een apostrof of een verbindingsstreepje. 
+    intro: `In woorden met een afkorting staat een apostrof, of een verbindingsstreepje. 
     Wanneer gebruik je de apostrof en wanneer het verbindingsstreepje?`,
     voorbeeld: [
       `Menig `,
