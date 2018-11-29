@@ -1,54 +1,10 @@
-
-/* SJABLOON
-  "SLUG": {
-    title: ``,
-    intro: ``,
-    voorbeeld: [
-      ``,
-      {
-        fout: ``,
-        goed: ``
-      },
-      `.`,
-    ],
-    hints: [
-      `HTML`,
-      `HTML`,
-    ],
-    uitleg: [
-      {
-        tekst: `HTML`,
-        pijlen: [
-          {
-            links: `HTML`,
-            rechts: `HTML`
-          },
-        ]
-      },{
-        tekst: `HTML`,
-        pijlen: [
-          {
-            links: `HTML`,
-            rechts: `HTML`
-          },
-        ]
-      }
-    ],
-    referenties: [
-      {
-        url: ``,
-        tekst: ``
-      },
-    ]
-  },
-*/
-
-
 export default {
+
+  
   "ICT-er-of-ICT'er": {
     cat: "spelling",  // "spelling", "stijl" of "werkwoord"
     ref: "kolom 13",
-    datum: new Date(2018, 10, 19),  // YYYY MM DD - maand altijd 1 minder!
+    datum: new Date(2018, 10, 19),  // YYYY MM DD - maand altijd 1 minder! januari = 00
     title: `ICT-er of ICT’er, zzp'contract of zzp-contract`,
     intro: `In woorden met een afkorting staat een apostrof of een verbindingsstreepje. 
     Wanneer gebruik je de apostrof en wanneer het verbindingsstreepje?`,
@@ -74,7 +30,7 @@ export default {
         <strong>ICT</strong> is een afkorting en <strong>er</strong> is hier geen zelfstandig woord, maar een achtervoegsel.<br>
         Bekende achtervoegsels bij afkortingen zijn: <strong>er</strong>, <strong>tje</strong>, <strong>loos</strong>, 
         <strong>en</strong>.
-      <p>
+      </p>
       <ul>
         <li>zzp’er</li>
         <li>vwo’ers</li>
@@ -112,8 +68,10 @@ export default {
       `Je schrijft <strong>teveel</strong> alleen aan elkaar als je er <strong>een</strong> voor kunt zetten.`,
     ],
     uitleg: `
-      <p><strong>Te veel</strong> slaap maakt je nog slaperiger. <strong>te veel</strong> zijn hier twee woorden, 
-      niet aan elkaar geschreven.</p>
+      <p>
+        <strong>Te veel</strong> slaap maakt je nog slaperiger. <strong>te veel</strong> zijn hier twee woorden, 
+        niet aan elkaar geschreven.
+      </p>
       <ul>
         <li><strong>veel</strong> slaap: <strong>veel</strong> is een bijvoeglijk naamwoord en zegt iets over de slaap.</li>
         <li><strong>te veel</strong> slaap: <strong>te</strong> zegt iets over veel → een te grote dosis slaap.</li>
